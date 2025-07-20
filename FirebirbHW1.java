@@ -1,7 +1,8 @@
+//AC, 2025-07-19, Firebirds HW #1
 import java.util.Scanner;
 public class FirebirbHW1 {
     public static void main(String[] args) {
-        //Fruit problem
+        // Decision Statements
         Scanner fruit = new Scanner(System.in);
         System.out.println("1 for fruits, 2 if you would like a drink");
         int fruits = Integer.parseInt(fruit.nextLine());
@@ -31,7 +32,7 @@ public class FirebirbHW1 {
                 }
                 break;
             case 2:
-                System.out.println("OK, what drink?");
+                System.out.println("OK, what drink? We offer all kinds of drinks!");
                 String drink = fruit.nextLine();
                 System.out.println("OK, we will be getting you " + drink);
                 break;
@@ -39,25 +40,32 @@ public class FirebirbHW1 {
                 System.out.println("Type something!");
                 break;
         }
-        //Other loop problems
-        int a = 5;
+        // Loops
+        int a = 5; 
         do {
             System.out.println(a);
             a += 3;
         } while (a <= 100);
-        Scanner sting = new Scanner(System.in);
+        Scanner message = new Scanner(System.in);
         System.out.println("Input anything and watch it go poof");
-        String mySting = sting.nextLine();
-        if (mySting.length() <= 0) {
+        String myMessage = message.nextLine();
+        if (myMessage.length() <= 0) {
             System.out.println("You need something!");
         }
         else {
-            for (int i = mySting.length()-1; i >= 0; i--) {
-                mySting = mySting.substring(0, i);
-                System.out.println(mySting);
+            for (int i = myMessage.length()-1; i >= 0; i--) {
+                myMessage = myMessage.substring(0, i);
+                System.out.println(myMessage);
             }
         }
-        sting.close();
+        // Variable Initialization
+        double bankMoney;
+        long naturalNumberSum;
+        char letter;
+        String robotName;
+        double sphereVolume;
+
+        message.close();
         fruit.close();
     }
 }
