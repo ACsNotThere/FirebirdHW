@@ -64,7 +64,7 @@ public class FirebirbHW1 {
         char letter; // Represents a letter (A-Z)
         String robotName; // Name of a robot
         double sphereVolume; // Measurements and pi have decimals in them
-        int brainNeurons; // You can't have a fraction of a neuron
+        long brainNeurons; // You can't have a fraction of a neuron and we have a ton of neurons
 
         // Scanner closes
         fruit.close(); // From Decision Statements
