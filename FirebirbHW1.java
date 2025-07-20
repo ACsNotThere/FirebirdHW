@@ -64,7 +64,7 @@ public class FirebirbHW1 {
         char letter;
         String robotName;
         double sphereVolume;
-        int brainNeurons
+        int brainNeurons;
 
         // Scanner closes
         message.close();
