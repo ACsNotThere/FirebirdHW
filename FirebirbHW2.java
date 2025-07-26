@@ -1,7 +1,8 @@
 import java.util.Scanner;
 public class FirebirbHW2 { 
     public static void main(String[] args) {
-        Scanner asker = new Scanner(System.in);
+        // Setup for code
+        Scanner asker = new Scanner(System.in); 
         Human namer[] = new Human[5];
         int chooser[] = new int[2];
         namer[0] = new Human("A",7,0.00);
@@ -9,6 +10,8 @@ public class FirebirbHW2 {
         namer[2] = new Human("C",16,18070.10);
         namer[3] = new Human("D",43,96847.31);
         namer[4] = new Human("E",0,0.00);
+
+        // Actual code execution
         namer[0].greet();
         namer[3].netIncomeReveal();
         namer[1].futureBirthday();
@@ -18,6 +21,7 @@ public class FirebirbHW2 {
         }
         System.out.println(relationDeterminer(namer[chooser[0]].name, namer[chooser[1]].name));
     }
+    // Method for #3
     public static String relationDeterminer(String partnerA, String partnerB) {
         int a = (int)(Math.random() * 3);
         switch(a) {
@@ -34,6 +38,7 @@ public class FirebirbHW2 {
         return "";
     }
 }
+// Classes & methods for #1-2
 class Human {
     public String name;
     private int age;
