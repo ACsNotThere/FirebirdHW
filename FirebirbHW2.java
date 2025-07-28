@@ -20,6 +20,7 @@ public class FirebirbHW2 {
             chooser[i] = Integer.parseInt(asker.nextLine()) - 1;
         }
         System.out.println(relationDeterminer(namer[chooser[0]].name, namer[chooser[1]].name));
+        asker.close();
     }
     // Method for #3
     public static String relationDeterminer(String partnerA, String partnerB) {
@@ -37,11 +38,26 @@ public class FirebirbHW2 {
         }
         return "";
     }
+    // PTconference method prompt (2nd prompt)
+    public static void PTconference(String name, double classAverages) {
+        if(classAverages <= 100 && classAverages >= 90) {
+            System.out.println(name + " is doing very well in classes with a " + classAverages + "% average. Their teachers are really proud of them!");
+        }
+        else if(classAverages <= 89 && classAverages >= 80) {
+            System.out.println(name + " is doing great in classes with a " + classAverages + "% average. Their teachers are happy of their performance and will provide next steps.");
+        }
+        else if(classAverages <= 79 && classAverages >= 70) {
+            System.out.println(name + " is doing OK in classes with a " + classAverages + "% average. Their teachers wish for some improvements that could boost their grade, but they are content.");
+        }
+        else if(classAverages <= 69) {
+            System.out.println(name + " is struggling in classes with a " + classAverages + "% average. Their teachers are concerned for this student's performance, and want major improvements to elevate their grade.");
+        }
+    }
 }
 // Classes & methods for #1-2
 class Human {
-    public String name;
-    private int age;
+    protected String name;
+    protected int age;
     protected double netIncome;
     public Human(String name, int age, double netIncome) {
         this.name = name;
@@ -56,5 +72,25 @@ class Human {
     }
     public void futureBirthday() {
         System.out.println(name + " will be " + (age + 1) + " next year!");
+    }
+}
+// Same constructors for each subclass (1st prompt for lesson 3)
+class Teacher extends Human {
+    public Teacher(String name, int age, double netIncome) {
+        super(name, age, netIncome);
+    }
+}
+class Student extends Human {
+    public Student(String name, int age, double classAverages) {
+        super(name, age, classAverages);
+    }
+    @Override // Assuming they don't have a part-time job
+    public void netIncomeReveal() {
+        System.out.println(name + " does not have a net income!");
+    }
+}
+class Parent extends Human {
+    public Parent(String name, int age, double netIncome) {
+        super(name, age, netIncome);
     }
 }
