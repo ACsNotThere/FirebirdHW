@@ -21,6 +21,8 @@ public class FirebirbHW2 {
         }
         System.out.println(relationDeterminer(namer[chooser[0]].name, namer[chooser[1]].name));
         asker.close();
+        Student student = new Student("AC", 14, 90.5);
+        PTconference(student.name, student.classAverages);
     }
     // Method for #3
     public static String relationDeterminer(String partnerA, String partnerB) {
@@ -81,8 +83,10 @@ class Teacher extends Human {
     }
 }
 class Student extends Human {
+    public double classAverages;
     public Student(String name, int age, double classAverages) {
         super(name, age, classAverages);
+        this.classAverages = classAverages;
     }
     @Override // Assuming they don't have a part-time job
     public void netIncomeReveal() {
