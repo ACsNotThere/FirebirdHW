@@ -20,9 +20,9 @@ public class FirebirbHW2 {
             chooser[i] = Integer.parseInt(asker.nextLine()) - 1;
         }
         System.out.println(relationDeterminer(namer[chooser[0]].name, namer[chooser[1]].name));
-        asker.close();
         Student student = new Student("AC", 14, 90.5);
         PTconference(student.name, student.classAverages);
+        asker.close();
     }
     // Method for #3
     public static String relationDeterminer(String partnerA, String partnerB) {
