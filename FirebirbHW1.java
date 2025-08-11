@@ -1,4 +1,12 @@
 import java.util.Scanner;
+/* General Feedback:
+* Not fulfilling all the requirements in the question
+* Make variables for the prices in case you ever need to change them
+* Remember to close the Scanner object to prevent memory leaks
+* Try implementing try catch for exceptions (errors)
+* Rename your classes, methods, variables, constants to the correct naming conventions in the 'Resources' tab.
+* Make the program be able to run for multiple times till the user wants to stop
+*/
 public class FirebirbHW1 {
     public static void main(String[] args) {
         // Decision Statements
